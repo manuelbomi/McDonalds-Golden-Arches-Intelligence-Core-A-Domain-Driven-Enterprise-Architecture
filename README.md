@@ -93,6 +93,40 @@ Based on the McDonald's current and future capabilities, here is a  proposed dom
 
 -  <ins>Data & AI Platform Context</ins>: A Supporting Subdomain that provides data products (feature stores, trained models, analytics) as reusable services to all other domains. It does not own business logic.
 
+---
+
+## 4. Target State Architecture Blueprint
+
+This diagram synthesizes the Omni-Channel view with the Domain-Driven decomposition and the layered principle.
+
+<img width="9042" height="4600" alt="Image" src="https://github.com/user-attachments/assets/a144b5ac-8963-4065-8b69-6ad25fb3a131" />
+
+*Figure 2: Target State Architectuer Blueprint - Layered Omni-Channel Ecosystem*
+
+*This diagram illustrates the five-layer target architecture for McDonald's global omni-channel ecosystem. The Channel Layer represents customer touchpoints, which connect through the Integration Layer to Business Capability Layer microservices organized by Domain-Driven Design bounded contexts. The Data & Intelligence Layer provides shared AI/ML capabilities, all supported by the foundational Data Foundation & Governance Layer with cross-cutting security and compliance controls.*
+
+---
+
+## 5. AI & Data Mesh Implementation View
+
+To enable "AI-powered personalization at global scale," we adopt a hybrid data mesh approach. The Data & AI Platform Context acts as the central enablement platform, while each domain owns its domain-oriented data products.
+
+<img width="7340" height="3848" alt="Image" src="https://github.com/user-attachments/assets/52a791b7-eba7-4b37-a4c9-cda2855600cf" />
+
+*Figure 3: AI & Data Mesh Implementation - Federated Data Products*
+
+*This diagram depicts the hybrid data mesh implementation where domain teams own their data products while consuming centralized platform services. Domain Data Product Owners publish to the Data & AI Platform, which provides standardized Feature Stores, MLOps orchestration, and unified storage, enabling AI services to deliver intelligence back to the consuming domains.*
+
+#### Key AI Use Cases Mapped to Architecture:
+
+- <ins>Drive-Thru Menu Optimization</ins>: Restaurant Ops Context (local traffic, time) + Customer Context (local preferences) → Real-Time Inference Engine → Suggestion to Drive-Thru System.
+
+- <ins>Cross-Channel Personalization</ins>: Customer Profile (Materialized View) + Order History (Event Stream) → Feature Store → Promotion Service → PersonalizedOfferGenerated event consumed by all Channel Layer systems.
+
+---
+
+
+
 
 
 
