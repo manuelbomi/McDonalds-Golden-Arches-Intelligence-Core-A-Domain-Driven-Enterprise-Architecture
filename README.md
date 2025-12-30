@@ -64,4 +64,10 @@ DDD is not merely a technical choice; it is an organizational imperative for a g
 
 ---
 
+## 3. The Domain Landscape: Bounded Contexts for McDonald's
+
+Based on the McDonald's current and future capabilities, here is a  proposed domain decomposition using DDD principles:
+
+<img width="6955" height="2808" alt="Image" src="https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c" />
+
 
