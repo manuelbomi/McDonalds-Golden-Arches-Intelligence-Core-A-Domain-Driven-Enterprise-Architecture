@@ -49,5 +49,19 @@ DDD is not merely a technical choice; it is an organizational imperative for a g
   - <ins>Conformist</ins> (with external Delivery Partner contexts)
 
   - <ins>Anti-Corruption Layers</ins> (ACLs) to isolate core domains from external or legacy subsystems
+ 
+---
+
+## 2.2 Supporting Architectural Styles & Patterns
+
+- <ins>Microservices</ins>: The deployment and runtime manifestation of a Bounded Context. Each domain capability is realized as an independently deployable service.
+
+- <ins>Event-Driven Architecture (EDA)</ins>: The primary mechanism for Context Mapping and achieving real-time omni-channel awareness. Events like OrderPlaced or CustomerIdentifiedAtDriveThru propagate state changes across the ecosystem.
+
+- <ins>API-First Design</ins>: All service interactions, both internal and external (e.g., delivery partners), are governed by well-defined, versioned REST/GraphQL APIs.
+
+- <ins>Layered Architecture with a Clear Separation of Concerns</ins>: Distinguishes between Channel, Integration, Intelligence (Business Logic), and Data layers to manage complexity.
+
+---
 
 
