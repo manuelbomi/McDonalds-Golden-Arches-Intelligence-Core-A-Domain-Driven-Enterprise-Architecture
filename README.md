@@ -31,4 +31,22 @@
 
 ---
 
+## 2. Foundational Architecture Principles & Concepts
+### 2.1 Domain-Driven Design (DDD) as the Cornerstone
+DDD is not merely a technical choice; it is an organizational imperative for a global, distributed enterprise like McDonald's. It ensures that software/AI/data architecture mirrors day-to-day business realities
+
+- Bounded Contexts: Explicitly defined boundaries where a particular domain model, with its precise Ubiquitous Language, applies. This prevents the fatal conflation of terms like "Order" (Customer Context) with "Ticket" (Kitchen Context) or "Invoice" (Finance Context).
+
+- Ubiquitous Language: A shared, rigorous vocabulary used consistently by both business stakeholders and technologists within a bounded context. This eliminates ambiguity and accelerates development.
+
+- Context Mapping: The strategic view of how bounded contexts interact. We employ:
+
+  - <ins>Partnerships</ins> (e.g., Order Management & Payment Processing)
+
+  - <ins>Customer-Supplier</ins> (e.g., Customer Profile supplies data to Personalization Engine)
+
+  - <ins>Conformist</ins> (with external Delivery Partner contexts)
+
+  - <ins>Anti-Corruption Layers</ins> (ACLs) to isolate core domains from external or legacy subsystems
+
 
