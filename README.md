@@ -18,8 +18,7 @@
 > 2. The application of industry-standard architecture frameworks (TOGAF, ArchiMate) and patterns (Domain-Driven Design, Data Mesh) to McDonald's specific global-enterprise context.
 > 3. Professional judgment regarding scalable, sustainable, and secure designs for omni-channel data and AI platforms.
 >    
-> <ins>Path to Realized Value</ins>:
-> 
+> <ins>Path to Realized Value</ins>: 
 > The true strategic value of enterprise architecture is realized not in documents, but in execution. This perspective will be validated and refined through:
 > 
 > (i) <ins>Collaborative Refinement</ins>: Extensive workshops and reviews with technical teams (Global Technology, product engineering, data science) and business stakeholders (marketing, operations, finance, restaurant teams).
