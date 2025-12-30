@@ -1,0 +1,1 @@
+# McDonalds-Golden-Arches-Intelligence-Core-A-Domain-Driven-Enterprise-Architecture
