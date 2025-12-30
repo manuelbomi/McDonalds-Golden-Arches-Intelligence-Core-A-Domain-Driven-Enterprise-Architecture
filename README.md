@@ -76,7 +76,22 @@ Based on the McDonald's current and future capabilities, here is a  proposed dom
 <img width="6955" height="2808" alt="Image" src="https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c" />
 
 *Figure 1: Domain Landscape - Bounded Contexts Mapping* 
+
 *This context map organizes McDonald's business capabilities into four domain categories using Domain-Driven Design principles. Core Domains represent differentiating capabilities, Supporting Domains enable operational excellence, Generic Subdomains provide commoditized functions, and Strategic Enablers deliver shared intelligence infrastructure, with Governance providing cross-domain standards.*
+
+---
+
+#### Key Domain Contexts & Their Responsibilities:
+
+- <ins>1. Customer Engagement Context</ins>: Owns the Customer Profile, loyalty status, and preference history. Publishes CustomerBehaviorUpdated events.
+
+- <ins>2. Order Management Context</ins>: The system of record for the customer's order journey. Orchestrates fulfillment across channels. Publishes OrderPlaced, OrderStatusChanged events.
+
+- <ins>3. Promotions & Offers Context</ins>: Manages campaign rules, eligibility, and AI-driven personalization logic. Consumes customer and context data to publish PersonalizedOfferGenerated events.
+
+- <ins>4. Restaurant Operations Context</ins>: Owns real-time store state (inventory, equipment health, crew staffing). Publishes DriveThruQueueUpdated, InventoryLow events.
+
+- <ins>5. Data & AI Platform Context</ins>: A Supporting Subdomain that provides data products (feature stores, trained models, analytics) as reusable services to all other domains. It does not own business logic.
 
 
 
