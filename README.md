@@ -111,7 +111,7 @@ This diagram synthesizes the Omni-Channel view with the Domain-Driven decomposit
 
 To enable "AI-powered personalization at global scale," we adopt a hybrid data mesh approach. The Data & AI Platform Context acts as the central enablement platform, while each domain owns its domain-oriented data products.
 
-<img width="7340" height="3848" alt="Image" src="https://github.com/user-attachments/assets/52a791b7-eba7-4b37-a4c9-cda2855600cf" />
+<img width="8340" height="3848" alt="Image" src="https://github.com/user-attachments/assets/52a791b7-eba7-4b37-a4c9-cda2855600cf" />
 
 *Figure 3: AI & Data Mesh Implementation - Federated Data Products*
 
