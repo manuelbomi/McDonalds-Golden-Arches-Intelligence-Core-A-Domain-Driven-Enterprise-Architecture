@@ -83,15 +83,15 @@ Based on the McDonald's current and future capabilities, here is a  proposed dom
 
 #### Key Domain Contexts & Their Responsibilities:
 
-- <ins>1. Customer Engagement Context</ins>: Owns the Customer Profile, loyalty status, and preference history. Publishes CustomerBehaviorUpdated events.
+- 1. <ins>Customer Engagement Context</ins>: Owns the Customer Profile, loyalty status, and preference history. Publishes CustomerBehaviorUpdated events.
 
-- <ins>2. Order Management Context</ins>: The system of record for the customer's order journey. Orchestrates fulfillment across channels. Publishes OrderPlaced, OrderStatusChanged events.
+- 2. <ins>Order Management Context</ins>: The system of record for the customer's order journey. Orchestrates fulfillment across channels. Publishes OrderPlaced, OrderStatusChanged events.
 
-- <ins>3. Promotions & Offers Context</ins>: Manages campaign rules, eligibility, and AI-driven personalization logic. Consumes customer and context data to publish PersonalizedOfferGenerated events.
+- 3. <ins>Promotions & Offers Context</ins>: Manages campaign rules, eligibility, and AI-driven personalization logic. Consumes customer and context data to publish PersonalizedOfferGenerated events.
 
-- <ins>4. Restaurant Operations Context</ins>: Owns real-time store state (inventory, equipment health, crew staffing). Publishes DriveThruQueueUpdated, InventoryLow events.
+- 4. <ins>Restaurant Operations Context</ins>: Owns real-time store state (inventory, equipment health, crew staffing). Publishes DriveThruQueueUpdated, InventoryLow events.
 
-- <ins>5. Data & AI Platform Context</ins>: A Supporting Subdomain that provides data products (feature stores, trained models, analytics) as reusable services to all other domains. It does not own business logic.
+- 5. <ins>Data & AI Platform Context</ins>: A Supporting Subdomain that provides data products (feature stores, trained models, analytics) as reusable services to all other domains. It does not own business logic.
 
 
 
