@@ -125,6 +125,28 @@ To enable "AI-powered personalization at global scale," we adopt a hybrid data m
 
 ---
 
+## 6. Standards, Governance & OKRs
+
+#### 6.1 Critical Architecture Standards
+
+- <ins>Event Standardization</ins>: All domain events must conform to a global schema registry (e.g., Apache Avro/Protobuf) with mandatory fields (eventId, timestamp, sourceContext, payload).
+
+- <ins>API Standards</ins>: RESTful APIs must follow McDonald's API Design Handbook, include versioning in the URL path, and provide OpenAPI 3.0 specifications.
+
+- <ins>Data Product Contract</ins>: A domain's data product must have a clear SLO for freshness, quality, and schema stability.
+
+---
+
+#### 6.2 Key Results (KR) for EA Practice
+
+- <ins>KR1: Reduce Time-to-Insight</ins>: Increase the percentage of key business decisions supported by real-time data (from <10% to >40% in 18 months).
+
+- <ins>KR2: Increase Capability Reuse</ins>: Achieve >70% reuse of core data products (e.g., Unified Customer Profile) across all new channel initiatives.
+
+- <ins>KR3: Improve Development Velocity</ins>: Reduce the integration time for a new channel (e.g., a new delivery partner) from months to under 4 weeks through standardized APIs and event contracts.
+
+- <ins>KR4: Ensure Responsible AI</ins>: 100% of production AI models are versioned, monitored for drift, and have documented bias assessments via the centralized MLOps platform.
+
 
 
 
