@@ -93,6 +93,8 @@ graph TB
 
 ## 3. Omni-Channel Data Flow & AI Personalization
 
+*This flowchart details the real-time AI personalization pipeline that transforms diverse customer and operational signals into intelligent, channel-specific customer experiences. Raw data from digital clickstreams, order history, location context, time/daypart patterns, and real-time restaurant state flows through the Feature Engineering Layer, where it is standardized in the Enterprise Feature Store. The ML & Generative AI Layer then processes these features through recommendation/forecasting models and generative AI services, with real-time inference serving personalized outputs to each customer touchpoint—including mobile app recommendations, kiosk upsells, drive-thru optimizations, and cross-channel targeted offers—creating a cohesive, intelligent omni-channel journey.*
+
 ```mermaid
 flowchart TB
     subgraph Inputs[Customer & Operational Signals]
@@ -148,7 +150,7 @@ flowchart TB
 ```
 Figure 2: Omni-Channel Personalization Pipeline - From Raw Signals to Channel-Specific Actions
 
-*This flowchart details the real-time AI personalization pipeline that transforms diverse customer and operational signals into intelligent, channel-specific customer experiences. Raw data from digital clickstreams, order history, location context, time/daypart patterns, and real-time restaurant state flows through the Feature Engineering Layer, where it is standardized in the Enterprise Feature Store. The ML & Generative AI Layer then processes these features through recommendation/forecasting models and generative AI services, with real-time inference serving personalized outputs to each customer touchpoint—including mobile app recommendations, kiosk upsells, drive-thru optimizations, and cross-channel targeted offers—creating a cohesive, intelligent omni-channel journey.*
+
 
 ---
 
