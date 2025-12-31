@@ -62,7 +62,33 @@ DDD is not merely a technical choice; it is an organizational imperative for a g
 
 - <ins>Layered Architecture with a Clear Separation of Concerns</ins>: Distinguishes between Channel, Integration, Intelligence (Business Logic), and Data layers to manage complexity.
 
+```mermaid
+graph TB
+    subgraph Current[Current State]
+        A[Data Silos]
+        B[Channel-Specific Systems]
+        C[Manual Analytics]
+        D[Limited AI Adoption]
+    end
+    
+    subgraph Target[Target State]
+        E[Unified Data Platform]
+        F[Omni-Channel Integration]
+        G[Real-Time AI/ML]
+        H[Automated Insights]
+    end
+    
+    A -- "Data Mesh<br/>Transformation" --> E
+    B -- "API & Event<br/>Standardization" --> F
+    C -- "MLOps & AutoML" --> G
+    D -- "Enterprise AI<br/>Platform" --> H
+    
+    style Current fill:#ffe6e6
+    style Target fill:#e6ffe6
+
 ---
+
+*Figure 1: Broad overview of the vision statement* 
 
 ## 3. The Domain Landscape: Bounded Contexts for McDonald's
 
@@ -75,7 +101,7 @@ Based on the McDonald's current and future capabilities, here is a  proposed dom
 
 <img width="6955" height="4808" alt="Image" src="https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c" />
 
-*Figure 1: Domain Landscape - Bounded Contexts Mapping* 
+*Figure 2: Domain Landscape - Bounded Contexts Mapping* 
 
 *This context map organizes McDonald's business capabilities into four domain categories using Domain-Driven Design principles. Core Domains represent differentiating capabilities, Supporting Domains enable operational excellence, Generic Subdomains provide commoditized functions, and Strategic Enablers deliver shared intelligence infrastructure, with Governance providing cross-domain standards.*
 
@@ -102,7 +128,7 @@ This diagram synthesizes the Omni-Channel view with the Domain-Driven decomposit
 
 <img width="9042" height="4600" alt="Image" src="https://github.com/user-attachments/assets/a144b5ac-8963-4065-8b69-6ad25fb3a131" />
 
-*Figure 2: Target State Architectuer Blueprint - Layered Omni-Channel Ecosystem*
+*Figure 3: Target State Architectuer Blueprint - Layered Omni-Channel Ecosystem*
 
 *This diagram illustrates the five-layer target architecture for McDonald's global omni-channel ecosystem. The Channel Layer represents customer touchpoints, which connect through the Integration Layer to Business Capability Layer microservices organized by Domain-Driven Design bounded contexts. The Data & Intelligence Layer provides shared AI/ML capabilities, all supported by the foundational Data Foundation & Governance Layer with cross-cutting security and compliance controls.*
 
@@ -114,7 +140,7 @@ To enable "AI-powered personalization at global scale," we adopt a hybrid data m
 
 <img width="11340" height="6848" alt="Image" src="https://github.com/user-attachments/assets/52a791b7-eba7-4b37-a4c9-cda2855600cf" />
 
-*Figure 3: AI & Data Mesh Implementation - Federated Data Products*
+*Figure 4: AI & Data Mesh Implementation - Federated Data Products*
 
 *This diagram depicts the hybrid data mesh implementation where domain teams own their data products while consuming centralized platform services. Domain Data Product Owners publish to the Data & AI Platform, which provides standardized Feature Stores, MLOps orchestration, and unified storage, enabling AI services to deliver intelligence back to the consuming domains.*
 
