@@ -81,7 +81,7 @@ Based on the McDonald's current and future capabilities, here is a  proposed dom
 
 
 <div style="width: 3000%;">
-  ![Alt Text]("https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c")
+  ![Alt Text](https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c)
 </div>
 
 ---
