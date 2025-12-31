@@ -157,10 +157,6 @@ graph TB
     GOV --> DAP
 ```
 
-
-
-<img width="6955" height="4808" alt="Image" src="https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c" />
-
 *Figure 2: Domain Landscape - Bounded Contexts Mapping* 
 
 *This context map organizes McDonald's business capabilities into four domain categories using Domain-Driven Design principles. Core Domains represent differentiating capabilities, Supporting Domains enable operational excellence, Generic Subdomains provide commoditized functions, and Strategic Enablers deliver shared intelligence infrastructure, with Governance providing cross-domain standards.*
