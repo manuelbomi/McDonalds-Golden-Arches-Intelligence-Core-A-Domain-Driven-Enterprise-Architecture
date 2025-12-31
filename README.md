@@ -182,6 +182,88 @@ graph TB
 
 This diagram synthesizes the Omni-Channel view with the Domain-Driven decomposition and the layered principle.
 
+```mermaid
+flowchart TB
+    subgraph CL[Channel Layer<br/>Omni-Channel Touchpoints]
+        Mobile[Mobile App]
+        Web[Web Platform]
+        Kiosk[In-Restaurant Kiosk]
+        DriveThru[Drive-Thru System]
+        DeliveryUI[Delivery Partner Apps]
+    end
+
+    subgraph IL[Integration & Federation Layer]
+        APIGW[API Gateway]
+        ES[Event Streaming Platform<br/>Kafka]
+        IAM[Identity & Access Management]
+    end
+
+    subgraph BL[Business Capability Layer<br/>Bounded Contexts as Microservices]
+        subgraph Core[Core Domains]
+            CE[Customer Service<br/>Owns Customer Profile & Loyalty]
+            OM[Order Service<br/>Orchestrates Order Journey]
+            PO[Promotion Service<br/>AI-Personalized Offers]
+        end
+        
+        subgraph Supporting[Supporting Domains]
+            KO[Kitchen Service<br/>Manages Food Preparation]
+            DL[Delivery Service<br/>Route & Partner Coordination]
+            RO[Restaurant Ops Service<br/>Real-time Store State]
+        end
+    end
+
+    subgraph DIL[Data & Intelligence Layer]
+        CEP[Complex Event Processing]
+        RTI[Real-Time Inference Engine]
+        FS[Feature Store]
+        UCP[Unified Customer Profile<br/>Materialized View]
+    end
+
+    subgraph DFL[Data Foundation & Governance Layer]
+        EDP[Enterprise Data Platform<br/>Lakehouse Architecture]
+        MDM[Master Data Management]
+        GOV[Security, Privacy & Compliance Controls]
+        MLOps[MLOps Platform<br/>Model Lifecycle Management]
+    end
+
+    %% Straight line connections from Channel Layer
+    Mobile --> APIGW
+    Web --> APIGW
+    Kiosk --> APIGW
+    DriveThru --> ES
+    DeliveryUI --> APIGW
+    
+    %% Straight connections to Business Layer
+    APIGW --> CE
+    APIGW --> OM
+    APIGW --> PO
+    ES --> RO
+    ES --> OM
+    
+    %% Business Layer to Data/Intelligence Layer
+    CE --> UCP
+    OM --> FS
+    PO --> RTI
+    RO --> CEP
+    
+    %% Data Layer connections
+    FS --> RTI
+    UCP --> RTI
+    CEP --> EDP
+    
+    %% Foundation Layer connections
+    EDP --> MLOps
+    MLOps --> RTI
+    MLOps --> FS
+    
+    %% Governance cross-cutting
+    GOV -.->|Governs| CL
+    GOV -.->|Governs| IL
+    GOV -.->|Governs| BL
+    GOV -.->|Governs| DIL
+    GOV -.->|Governs| DFL
+```
+
 <img width="9042" height="4600" alt="Image" src="https://github.com/user-attachments/assets/a144b5ac-8963-4065-8b69-6ad25fb3a131" />
 
 *Figure 3: Target State Architectuer Blueprint - Layered Omni-Channel Ecosystem*
