@@ -87,7 +87,7 @@ graph TB
     style Target fill:#e6ffe6
 ```
 
-*Figure 1: Broad overview of the vision statement* 
+*Figure 1: McDonald's current and target AI/Data capability landscape*
 
 ---
 
