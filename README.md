@@ -73,7 +73,7 @@ Based on the McDonald's current and future capabilities, here is a  proposed dom
 >
 
 
-<img width="6955" height="2808" alt="Image" src="https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c" />
+<img width="6955" height="3808" alt="Image" src="https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c" />
 
 *Figure 1: Domain Landscape - Bounded Contexts Mapping* 
 
