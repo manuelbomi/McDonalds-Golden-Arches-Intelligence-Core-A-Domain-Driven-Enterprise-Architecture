@@ -264,8 +264,6 @@ flowchart TB
     GOV -.->|Governs| DFL
 ```
 
-<img width="9042" height="4600" alt="Image" src="https://github.com/user-attachments/assets/a144b5ac-8963-4065-8b69-6ad25fb3a131" />
-
 *Figure 3: Target State Architectuer Blueprint - Layered Omni-Channel Ecosystem*
 
 *This diagram illustrates the five-layer target architecture for McDonald's global omni-channel ecosystem. The Channel Layer represents customer touchpoints, which connect through the Integration Layer to Business Capability Layer microservices organized by Domain-Driven Design bounded contexts. The Data & Intelligence Layer provides shared AI/ML capabilities, all supported by the foundational Data Foundation & Governance Layer with cross-cutting security and compliance controls.*
@@ -276,8 +274,54 @@ flowchart TB
 
 To enable "AI-powered personalization at global scale," we adopt a hybrid data mesh approach. The Data & AI Platform Context acts as the central enablement platform, while each domain owns its domain-oriented data products.
 
-<img width="11340" height="6848" alt="Image" src="https://github.com/user-attachments/assets/52a791b7-eba7-4b37-a4c9-cda2855600cf" />
+```mermaid
+flowchart LR
+    subgraph Domains[Domain Data Product Owners]
+        CE[Customer Domain<br/>Behavior Events<br/>Profile Attributes<br/>Loyalty Data]
+        RO[Restaurant Operations Domain<br/>Real-Time Metrics<br/>Equipment Logs<br/>Staff Performance]
+        OM[Order Domain<br/>Transactional Data<br/>Fulfillment Times<br/>Channel Performance]
+    end
 
+    subgraph Platform[Data & AI Platform<br/>Central Enablement Provider]
+        FS[Feature Store<br/>Standardized Schema<br/>Point-in-Time Correct<br/>Version Controlled]
+        MLOps[MLOps Orchestrator<br/>Model Registry<br/>Pipeline Automation<br/>Drift Monitoring]
+        S[Data Lakehouse<br/>Unified Storage<br/>Iceberg/Delta Format<br/>Governed Access]
+    end
+
+    subgraph Consumption[AI Service Consumption<br/>Domain-Specific Applications]
+        P[Personalization Service<br/>Promotions Context<br/>Real-time Recommendations]
+        F[Forecasting Service<br/>Restaurant Operations Context<br/>Demand Prediction]
+        O[Optimization Service<br/>Delivery Context<br/>Route & Timing Optimization]
+    end
+
+    %% Straight connections from Domains to Platform
+    CE --> FS
+    RO --> FS
+    OM --> FS
+    
+    CE --> S
+    RO --> S
+    OM --> S
+    
+    %% Straight connections from Platform to Consumption
+    FS --> P
+    FS --> F
+    FS --> O
+    
+    MLOps --> P
+    MLOps --> F
+    MLOps --> O
+    
+    %% Straight connections back from Consumption to Domains
+    P --> CE
+    F --> RO
+    O --> OM
+    
+    %% Platform internal connections
+    S --> MLOps
+    MLOps --> FS
+
+```
 *Figure 4: AI & Data Mesh Implementation - Federated Data Products*
 
 *This diagram depicts the hybrid data mesh implementation where domain teams own their data products while consuming centralized platform services. Domain Data Product Owners publish to the Data & AI Platform, which provides standardized Feature Stores, MLOps orchestration, and unified storage, enabling AI services to deliver intelligence back to the consuming domains.*
