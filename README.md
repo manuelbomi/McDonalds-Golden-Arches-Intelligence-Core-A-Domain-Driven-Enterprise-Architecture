@@ -148,7 +148,7 @@ flowchart TB
     Inference --> Offers
 
 ```
-Figure 2: Omni-Channel Personalization Pipeline - From Raw Signals to Channel-Specific Actions
+*Figure 2: Omni-Channel Personalization Pipeline - From Raw Signals to Channel-Specific Actions*
 
 
 
