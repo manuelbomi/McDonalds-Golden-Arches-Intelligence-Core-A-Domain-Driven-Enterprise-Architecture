@@ -80,10 +80,6 @@ Based on the McDonald's current and future capabilities, here is a  proposed dom
 *This context map organizes McDonald's business capabilities into four domain categories using Domain-Driven Design principles. Core Domains represent differentiating capabilities, Supporting Domains enable operational excellence, Generic Subdomains provide commoditized functions, and Strategic Enablers deliver shared intelligence infrastructure, with Governance providing cross-domain standards.*
 
 
-<div style="width: 3000%;">
-  ![Alt Text](https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c)
-</div>
-
 ---
 
 #### Key Domain Contexts & Their Responsibilities:
