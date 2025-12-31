@@ -36,7 +36,7 @@
 ### 2.1 Domain-Driven Design (DDD) as the Cornerstone
 DDD is not merely a technical choice; it is an organizational imperative for a global, distributed enterprise like McDonald's. It ensures that software/AI/data architecture mirrors day-to-day business realities
 
-- Bounded Contexts: Explicitly defined boundaries where a particular domain model, with its precise Ubiquitous Language, applies. This prevents the fatal conflation of terms like "Order" (Customer Context) with "Ticket" (Kitchen Context) or "Invoice" (Finance Context).
+- Bounded Contexts: Explicitly defined boundaries where a particular domain model, with its precise Ubiquitous Language applied. This prevents the fatal conflation of terms like "Order" (Customer Context) with "Ticket" (Kitchen Context) or "Invoice" (Finance Context).
 
 - Ubiquitous Language: A shared, rigorous vocabulary used consistently by both business stakeholders and technologists within a bounded context. This eliminates ambiguity and accelerates development.
 
