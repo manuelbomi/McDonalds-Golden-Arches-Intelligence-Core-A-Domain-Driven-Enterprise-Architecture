@@ -87,9 +87,11 @@ graph TB
     style Target fill:#e6ffe6
 ```
 
+*Figure 1: Broad overview of the vision statement* 
+
 ---
 
-*Figure 1: Broad overview of the vision statement* 
+
 
 ## 3. The Domain Landscape: Bounded Contexts for McDonald's
 
