@@ -91,9 +91,68 @@ graph TB
 
 ---
 
+## 3. Omni-Channel Data Flow & AI Personalization
 
+```mermaid
+flowchart TB
+    subgraph Inputs[Customer & Operational Signals]
+        Clicks[Digital Clickstream]
+        Orders[Order History]
+        Location[Location Context]
+        Time[Time & Daypart]
+        Store[Restaurant State]
+    end
 
-## 3. The Domain Landscape: Bounded Contexts for McDonald's
+    subgraph Features[Feature Engineering Layer]
+        Ingest[Real-Time & Batch Ingestion]
+        FS[Enterprise Feature Store<br/>Standardized Features]
+    end
+
+    subgraph AI[ML & Generative AI Layer]
+        Models[Machine Learning Models<br/>Recommendation, Forecasting]
+        GenAI[Generative AI Services<br/>Content, Offers]
+        Inference[Real-Time Inference<br/>Low Latency Serving]
+    end
+
+    subgraph Outputs[Omni-Channel Personalization]
+        Mobile[Mobile App<br/>Personalized Recommendations]
+        Kiosk[In-Restaurant Kiosk<br/>Context-Aware Upsells]
+        DriveThru[Drive-Thru System<br/>Optimized Menu & Speed]
+        Offers[Targeted Offers Engine<br/>Cross-Channel Consistency]
+    end
+
+    %% Straight connections from Inputs to Features
+    Clicks --> Ingest
+    Orders --> Ingest
+    Location --> Ingest
+    Time --> Ingest
+    Store --> Ingest
+    
+    %% Straight connections to Feature Store
+    Ingest --> FS
+    
+    %% Straight connections from Features to AI
+    FS --> Models
+    FS --> GenAI
+    
+    %% Straight connections to Inference
+    Models --> Inference
+    GenAI --> Inference
+    
+    %% Straight connections to Outputs
+    Inference --> Mobile
+    Inference --> Kiosk
+    Inference --> DriveThru
+    Inference --> Offers
+
+```
+Figure 2: Omni-Channel Personalization Pipeline - From Raw Signals to Channel-Specific Actions
+
+*This flowchart details the real-time AI personalization pipeline that transforms diverse customer and operational signals into intelligent, channel-specific customer experiences. Raw data from digital clickstreams, order history, location context, time/daypart patterns, and real-time restaurant state flows through the Feature Engineering Layer, where it is standardized in the Enterprise Feature Store. The ML & Generative AI Layer then processes these features through recommendation/forecasting models and generative AI services, with real-time inference serving personalized outputs to each customer touchpoint—including mobile app recommendations, kiosk upsells, drive-thru optimizations, and cross-channel targeted offers—creating a cohesive, intelligent omni-channel journey.*
+
+---
+
+## 4. The Domain Landscape: Bounded Contexts for McDonald's
 
 Based on the McDonald's current and future capabilities, here is a  proposed domain decomposition using DDD principles:
 
@@ -157,7 +216,7 @@ graph TB
     GOV --> DAP
 ```
 
-*Figure 2: Domain Landscape - Bounded Contexts Mapping* 
+*Figure 3: Domain Landscape - Bounded Contexts Mapping* 
 
 *This context map organizes McDonald's business capabilities into four domain categories using Domain-Driven Design principles. Core Domains represent differentiating capabilities, Supporting Domains enable operational excellence, Generic Subdomains provide commoditized functions, and Strategic Enablers deliver shared intelligence infrastructure, with Governance providing cross-domain standards.*
 
@@ -178,7 +237,7 @@ graph TB
 
 ---
 
-## 4. Target State Architecture Blueprint
+## 5. Target State Architecture Blueprint
 
 This diagram synthesizes the Omni-Channel view with the Domain-Driven decomposition and the layered principle.
 
@@ -264,13 +323,13 @@ flowchart TB
     GOV -.->|Governs| DFL
 ```
 
-*Figure 3: Target State Architectuer Blueprint - Layered Omni-Channel Ecosystem*
+*Figure 4: Target State Architectuer Blueprint - Layered Omni-Channel Ecosystem*
 
 *This diagram illustrates the five-layer target architecture for McDonald's global omni-channel ecosystem. The Channel Layer represents customer touchpoints, which connect through the Integration Layer to Business Capability Layer microservices organized by Domain-Driven Design bounded contexts. The Data & Intelligence Layer provides shared AI/ML capabilities, all supported by the foundational Data Foundation & Governance Layer with cross-cutting security and compliance controls.*
 
 ---
 
-## 5. AI & Data Mesh Implementation View
+## 6. AI & Data Mesh Implementation View
 
 To enable "AI-powered personalization at global scale," we adopt a hybrid data mesh approach. The Data & AI Platform Context acts as the central enablement platform, while each domain owns its domain-oriented data products.
 
@@ -322,7 +381,7 @@ flowchart LR
     MLOps --> FS
 
 ```
-*Figure 4: AI & Data Mesh Implementation - Federated Data Products*
+*Figure 5: AI & Data Mesh Implementation - Federated Data Products*
 
 *This diagram depicts the hybrid data mesh implementation where domain teams own their data products while consuming centralized platform services. Domain Data Product Owners publish to the Data & AI Platform, which provides standardized Feature Stores, MLOps orchestration, and unified storage, enabling AI services to deliver intelligence back to the consuming domains.*
 
@@ -334,9 +393,9 @@ flowchart LR
 
 ---
 
-## 6. Standards, Governance & OKRs
+## 7. Standards, Governance & OKRs
 
-#### 6.1 Critical Architecture Standards
+#### 7.1 Critical Architecture Standards
 
 - <ins>Event Standardization</ins>: All domain events must conform to a global schema registry (e.g., Apache Avro/Protobuf) with mandatory fields (eventId, timestamp, sourceContext, payload).
 
@@ -346,7 +405,7 @@ flowchart LR
 
 ---
 
-#### 6.2 Key Results (KR) for EA Practice
+#### 7.2 Key Results (KR) for EA Practice
 
 - <ins>KR1: Reduce Time-to-Insight</ins>: Increase the percentage of key business decisions supported by real-time data (from <10% to >40% in 18 months).
 
@@ -358,7 +417,7 @@ flowchart LR
 
 ---
 
-## 7. Roadmap & Evolution
+## 8. Roadmap & Evolution
 
 #### Phase 1: Foundation & Consolidation (Next 12 Months)
 
