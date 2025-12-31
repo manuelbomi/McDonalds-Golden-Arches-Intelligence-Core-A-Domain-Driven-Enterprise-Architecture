@@ -449,7 +449,7 @@ flowchart LR
 
 ## Conclusion: 
 
-This Domain-Driven Enterprise Architecture provides a conceptual but coherent, strategic blueprint required to transform McDonald's Global Technology. It aligns technology directly with business capabilities, empowers distributed teams, and creates the scalable, intelligent foundation necessary to power tomorrow's feel-good moments, one perfectly architected interaction at a time.
+This Domain-Driven Enterprise Architecture provides a conceptual but coherent vision and strategic blueprint required to transform McDonald's Global Technology. It aligns technology directly with business capabilities, empowers distributed teams, and creates the scalable, intelligent foundation necessary to power tomorrow's feel-good moments, one perfectly architected interaction at a time.
 
 ---
 
