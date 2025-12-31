@@ -54,7 +54,7 @@ DDD is not merely a technical choice; it is an organizational imperative for a g
 
 ## 2.2 Supporting Architectural Styles & Patterns
 
-- <ins>Microservices</ins>: The deployment and runtime manifestation of a Bounded Context. Each domain capability is realized as an independently deployable service.
+- <ins>Microservices</ins>: The deployment and runtime manifestation of a Bounded Context. Each domain capability is realized as an independently deployable service. Interested readers may wish to see an example of microservices implementation that features Kafka topics as services on Kubernetes (Kind) platform here:  https://github.com/manuelbomi/Apache-Kafka-Enterprise-Microservices-Platform-on-Kubernetes 
 
 - <ins>Event-Driven Architecture (EDA)</ins>: The primary mechanism for Context Mapping and achieving real-time omni-channel awareness. Events like OrderPlaced or CustomerIdentifiedAtDriveThru propagate state changes across the ecosystem.
 
