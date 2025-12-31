@@ -100,6 +100,63 @@ Based on the McDonald's current and future capabilities, here is a  proposed dom
 > [!NOTE]
 > Interested readers may want to check about conceptual McDonald's current and target capabilities here: https://github.com/manuelbomi/Enterprise-Architecture-for-McDonald-s-AI-Data-Driven-Transformation-An-Architect-s-Strategic-Bluepr
 >
+> 
+
+```mermaid
+graph TB
+    subgraph Core[Core Domains<br/>Differentiating Capabilities]
+        CE[Customer Engagement<br/>Owns Customer Profile<br/>Loyalty & Preferences]
+        OM[Order Management<br/>Orchestrates Order Journey<br/>Across All Channels]
+        PO[Promotions & Offers<br/>AI-Personalized Campaigns<br/>& Real-time Eligibility]
+    end
+
+    subgraph Supporting[Supporting Domains<br/>Operational Excellence]
+        KO[Kitchen Operations<br/>Food Preparation<br/>Quality & Speed]
+        DL[Delivery & Logistics<br/>Route Optimization<br/>Partner Integration]
+        RO[Restaurant Operations<br/>Real-time Store State<br/>Equipment & Staffing]
+    end
+
+    subgraph Generic[Generic Subdomains<br/>Commoditized Capabilities]
+        ID[Identity & Access<br/>Authentication & Authorization]
+        PAY[Payment Processing<br/>Transaction Handling]
+        COM[Communications<br/>Notifications & Alerts]
+    end
+
+    subgraph Strategic[Strategic Enablers<br/>Intelligence Foundation]
+        DAP[Data & AI Platform<br/>Feature Store, MLOps<br/>Analytics Services]
+        GOV[Governance & Compliance<br/>Standards, Security<br/>& Policy Enforcement]
+    end
+
+    %% Straight connections between Core Domains
+    CE --> OM
+    OM --> PO
+    PO --> CE
+    
+    %% Straight connections to Supporting Domains
+    OM --> KO
+    OM --> DL
+    RO --> OM
+    RO --> PO
+    RO --> DL
+    
+    %% Straight connections from Strategic Enablers
+    DAP --> CE
+    DAP --> PO
+    DAP --> RO
+    
+    %% Governance to all domains
+    GOV --> CE
+    GOV --> OM
+    GOV --> PO
+    GOV --> KO
+    GOV --> DL
+    GOV --> RO
+    GOV --> ID
+    GOV --> PAY
+    GOV --> COM
+    GOV --> DAP
+```
+
 
 
 <img width="6955" height="4808" alt="Image" src="https://github.com/user-attachments/assets/aa512cb3-a221-4c61-af6c-4e5ce781897c" />
