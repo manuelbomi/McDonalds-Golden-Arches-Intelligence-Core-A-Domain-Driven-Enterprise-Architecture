@@ -21,7 +21,7 @@
 > <ins>Path to Realized Value</ins>: 
 > The true strategic value of enterprise architecture is realized not in documents, but in execution. This perspective will be validated and refined through:
 > 
-> (i) <ins>Collaborative Refinements</ins>: Extensive workshops and reviews with technical teams (Global Technology, product engineering, data science) and business stakeholders (marketing, operations, finance, restaurant teams; etc).
+> (i) <ins>Collaborative Refinements</ins>: Extensive workshops and reviews with technical teams (Global Technology, product engineering, solution architects, data science, data engineering; etc) and business stakeholders (marketing, operations, finance, restaurant teams; etc).
 > 
 > (ii) <ins>Iterative Validation</ins>: Testing architectural hypotheses through targeted prototypes, proof-of-concepts, and pilot implementations in selected markets or domains.
 > 
